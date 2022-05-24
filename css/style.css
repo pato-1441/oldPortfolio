@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.grid{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.1fr 1fr 0.05fr;
+    grid-template-areas: 
+        "navBar"
+        "hero"
+        "foot"    
+    ;
+}
+
+/*ARRANCA NAVBAR*/
+
+.navBar{
+    grid-area: navBar;
+    background-color: beige;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.navBar__h1 a{
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+
+.navBar__h1 a:hover{
+    color: beige;
+    background-color: rgb(84, 69, 50);
+}
+
+.navBar__ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.navBar__ul__li{    
+    margin-right: 2rem;
+    transition: background-color 0.5s;
+}
+
+.navBar__ul__li:hover{
+    background-color: rgb(84, 69, 50);
+}
+
+.navBar__ul__li a{
+    color: black;
+    text-decoration: none;    
+}
+
+.navBar__ul__li a:hover{
+    color: beige;
+}
+
+/*TERMINA NAVBAR*/
+
+/*HERO*/
+
+.hero{
+    grid-area: hero;
+    display: flex;
+    background-color: beige;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.hero__h2__a{
+    text-decoration: none;
+    color: burlywood;
+    transition: background-color 0.5s;
+}
+
+.hero__h2__a:hover{
+    color: beige;
+    background-color: rgb(84, 69, 50);
+}
+
+/*TERMINA HERO*/
+
+/*ARRANCA GRIDGALERY*/
+
+.grid-galery{
+    display: grid;
+    background-color: beige;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.grid-galery__container{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20rem 20rem;
+    background-color: beige;
+    place-items: center;
+}
+
+.grid-galery__cards{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.cards-border{
+    border: 5px solid burlywood;
+}
+
+/*TERMINA GRIDGALERY*/
+
+
+/*ARRANCA ABOUT*/
+.foo{
+    display: flex;
+    background-color: beige;
+    justify-content: center;
+    align-items: center;
+}
+
+.foo__container{
+    /* background-color: brown; */
+    display: flex;    
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 80rem;
+}
+
+.foo__container__img{
+    width: 400px;
+}
+
+.foo__container__img-curriculum{
+    width: 30%;
+}
+
+.foo__container__p{
+    padding-left: 1rem;
+}
+
+.foo__container__p a{
+    background-color: rgb(84, 69, 50);
+    display: flex;
+    height: 40px;
+    width: 200px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+}
+
+.foo__container__p a:hover{
+    background-color: burlywood;
+}
+
+/*TERMINA ABOUT*/
+
+/*ARRANCA CONTACT*/
+
+
+.farewell{
+    background-color: beige;
+    display: flex;
+}
+
+.farewell__div{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    margin-top: 17vh;
+    margin-left: 25vw;
+}
+
+.farewell__div__h3{
+    font-size: 2rem;
+}
+
+.farewell__div__h2{
+    font-size: 2.5rem;
+}
+
+.farewell__div__p{
+    font-size: 2.2rem;
+}
+
+.email__anchor{
+    color: rgb(84, 69, 50);
+    transition: background-color 0.5s;
+}
+
+.email__anchor:visited{
+    color: burlywood;
+}
+
+.email__anchor:hover{
+    color: beige;
+    background-color: rgb(84, 69, 50);
+}
+
+.farewell__form{
+    color: beige;
+    background-color: rgb(84, 69, 50);
+    height: 390px;
+    width: 295px;
+    padding-top: 15px;
+    padding-left: 25px;
+    margin-left: 50vw;
+    margin-top: 35vh;
+    border-radius: 5px;    
+    box-shadow: 5px 5px 1px burlywood;
+}
+
+.farewell__form__name_input{
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    width: 210px;
+}
+
+.farewell__form__sur_name_input{
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    width: 210px;
+}
+
+.farewell__form__email_input{
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    width: 210px;
+}
+
+.farewell__form__textarea{
+    margin-top: 10px;
+    resize: none;
+}
+
+.farewell__form__clean{
+    cursor: pointer;
+    margin-top: 4px;
+    padding: 3px;
+    background-color: burlywood;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+.farewell__form__clean:hover{
+    background-color: black;
+}
+
+.farewell__form__send{
+    cursor: pointer;
+    margin-top: 4px;
+    padding: 3px;
+    background-color: burlywood;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+.farewell__form__send:hover{
+    background-color: black;
+}
+
+/*TERMINA CONTACT*/
+
+/*ARRANCA FOOTER*/
+
+.foot{
+    grid-area: foot;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.icons{
+    color: beige;
+}
+
+.icons:hover{
+    color:rgb(84, 69, 50);
+}
+
+/*TERMINA FOOTER*/
+
+/*celular*/
+@media only screen and (max-width: 480px){
+    .navBar__h1{
+        display: none;
+        margin-top: 1rem;
+    }
+
+    .navBar{
+        flex-direction: column;
+    }
+
+    .navBar__ul__li a{
+        display: flex;
+        text-align:center;
+        margin-top: 1rem;
+    }
+
+    .hero{
+        font-size: 2rem;
+    }
+
+    .grid-galery__container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .foo{
+        background-color: beige;
+    }
+
+    .foo__container{
+        /* background-color: brown; */
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem; 
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 90vh;
+    }
+
+    .foo__container__img{
+        width: 10rem;
+        height: 13rem;
+    }
+
+    .foo__container__p{
+        background-color: burlywood;
+    }
+
+    .foo__container__p a:hover{
+        background-color: burlywood;
+    }
+
+}
+
+/*tablet*/
+@media only screen and (min-width:481px) and (max-width: 1023px){
+    .navBar{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .farewell{
+        background-color: beige;
+        display: flex;
+    }
+    
+    .farewell__div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media only screen and (min-width:479px) and (max-width: 650px){
+    .navBar{
+        flex-direction: column;
+        padding-top: 3%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}

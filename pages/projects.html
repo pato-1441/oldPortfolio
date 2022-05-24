@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p.a's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2a09230c59.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>                
+<body>
+    <!--establezco todo en grilla-->
+    <div class="grid">
+        <!--arranca navbar-->
+        <nav class="navBar">
+                <h1 class="navBar__h1"><a href="./index.html">patricioalbornoz</a></h1>
+                <ul class="navBar__ul">
+                    <li class="navBar__ul__li"><a href="../index.html">Home</a></li>
+                    <li class="navBar__ul__li"><a href="./projects.html">Projects</a></li>
+                    <li class="navBar__ul__li"><a href="./about.html">About</a></li>
+                    <li class="navBar__ul__li"><a href="./contact.html">Contact</a></li>
+                </ul>
+        </nav>
+        <!--termina navbar-->
+        <!--arranca galery-->
+        <main class="grid-galery"><!-- 
+            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500"> -->
+            <div data-aos="zoom-in-down" data-aos-delay="500" data-aos-duration="1500" class="grid-galery__container">
+                <div class="grid-galery__cards"><img id="img1" src="../img/img1.jpg" alt=""><h3>Titulo</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci neque fugit ab magni similique, accusamus vel inventore harum omnis perspiciatis.</p></div>
+                <div class="grid-galery__cards"><img id="img2" src="../img/img2.jpg" alt=""><h3>Titulo</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci neque fugit ab magni similique, accusamus vel inventore harum omnis perspiciatis.</p></div>
+                <div class="grid-galery__cards"><img id="img3" src="../img/img3.jpg" alt=""><h3>Titulo</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci neque fugit ab magni similique, accusamus vel inventore harum omnis perspiciatis.</p></div>
+                <div class="grid-galery__cards"><img id="img4" src="../img/img4.jpg" alt=""><h3>Titulo</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci neque fugit ab magni similique, accusamus vel inventore harum omnis perspiciatis.</p></div>
+            </div>
+            <!-- </div> -->
+        </main>
+        <!--termina galery-->
+        <!--arranca footer-->
+        <footer class="foot">
+            <a href="https://www.linkedin.com/in/patoalbornoz/" target="_blank"><i class="fa-brands fa-linkedin fa-xl icons"></i></a>
+            <a href="https://github.com/pato-1441" target="_blank"><i class="fa-brands fa-github fa-xl icons"></i></a>
+            <a href="https://www.instagram.com/patoalbornozz/" target="_blank"><i class="fa-brands fa-instagram fa-xl icons"></i></a>
+        </footer>
+        <!--termina footer-->
+    </div>  
+    <script>
+        AOS.init();
+    </script>   
+</body>
+</html>
