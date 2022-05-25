@@ -132,15 +132,21 @@
     display: flex;    
     margin-left: 1rem;
     margin-right: 1rem;
-    width: 80rem;
+    width: 100rem;
 }
 
 .foo__container__img{
-    width: 400px;
+    width: 400px;    
+}
+
+.foo__container-curriculum{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .foo__container__img-curriculum{
-    width: 30%;
+    height: 80vh;
 }
 
 .foo__container__p{
@@ -164,112 +170,139 @@
     background-color: burlywood;
 }
 
-/*TERMINA ABOUT*/
+#back-button{
+    width: 200px;
+}
 
+/*TERMINA ABOUT*/
 /*ARRANCA CONTACT*/
 
 
 .farewell{
     background-color: beige;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
 .farewell__div{
-    position: absolute;
+    text-align: center;
     color: rgb(0, 0, 0);
-    margin-top: 17vh;
-    margin-left: 25vw;
+    margin-bottom: 5rem;
 }
-
 .farewell__div__h3{
     font-size: 2rem;
 }
-
 .farewell__div__h2{
     font-size: 2.5rem;
 }
-
 .farewell__div__p{
     font-size: 2.2rem;
 }
-
 .email__anchor{
     color: rgb(84, 69, 50);
     transition: background-color 0.5s;
 }
-
 .email__anchor:visited{
     color: burlywood;
 }
-
 .email__anchor:hover{
     color: beige;
     background-color: rgb(84, 69, 50);
 }
 
-.farewell__form{
-    color: beige;
-    background-color: rgb(84, 69, 50);
-    height: 390px;
-    width: 295px;
-    padding-top: 15px;
-    padding-left: 25px;
-    margin-left: 50vw;
-    margin-top: 35vh;
-    border-radius: 5px;    
-    box-shadow: 5px 5px 1px burlywood;
+.container{
+    width: 80%;
+    padding: 20px;
+    background-color: black;
 }
 
-.farewell__form__name_input{
-    margin-top: 3px;
-    margin-bottom: 5px;
-    padding: 3px;
-    width: 210px;
+.container h2{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 30px;
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
-.farewell__form__sur_name_input{
-    margin-top: 3px;
-    margin-bottom: 5px;
-    padding: 3px;
-    width: 210px;
+.wrapper .box{
+    width: 100%;
+    position: relative;
+    padding: 20px;
 }
 
-.farewell__form__email_input{
-    margin-top: 3px;
-    margin-bottom: 5px;
-    padding: 3px;
-    width: 210px;
+.wrapper .box input{
+    width: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid burlywood;
+    transition: 0.2s linear;
 }
 
-.farewell__form__textarea{
+.wrapper .box input:focus,
+.wrapper .box input:valid{
+    padding: 20px 10px;
+    background-color: burlywood;
     margin-top: 10px;
+}
+
+.wrapper .box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    transition: 0.5s linear;
+}
+
+.wrapper .box input:focus ~ label,
+.wrapper .box input:valid ~ label{
+    padding: 0;
+}
+
+.wrapper .box textarea{
+    width: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid burlywood;
+    transition: 0.2s linear;
     resize: none;
 }
 
-.farewell__form__clean{
-    cursor: pointer;
-    margin-top: 4px;
-    padding: 3px;
+.wrapper .box textarea:focus,
+.wrapper .box textarea:valid{
+    padding: 20px 10px;
     background-color: burlywood;
+    margin-top: 10px;
+}
+
+.wrapper .box textarea:focus ~ label,
+.wrapper .box textarea:valid ~ label{
+    padding: 0;
+}
+
+.container input[type="submit"]{
     color: white;
-    transition: background-color 0.5s;
-}
-
-.farewell__form__clean:hover{
-    background-color: black;
-}
-
-.farewell__form__send{
-    cursor: pointer;
-    margin-top: 4px;
-    padding: 3px;
     background-color: burlywood;
-    color: white;
-    transition: background-color 0.5s;
-}
-
-.farewell__form__send:hover{
-    background-color: black;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /*TERMINA CONTACT*/
@@ -360,6 +393,17 @@
         display: grid;
         place-items: center;
     }
+
+    .farewell__div__h3{
+        font-size: 1.4rem;
+    }
+    .farewell__div__h2{
+        font-size: 1.6rem;
+    }
+    .farewell__div__p{
+        font-size: 1.2rem;
+    }
+
     .foo__container{
         /* background-color: brown; */
         width: 90vw;
@@ -386,35 +430,10 @@
     }
 
     /*TERMINA ABOUT*/
-    /*ARRANCA CONTACT*/
-    .farewell{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 300px, 1fr;
-        justify-content: center;
-        height: 100vh;
-        width: 100%;
-    }
-
-    .farewell__container{
-        display: grid;
-        width: 100%;
-        margin:0;
-        padding: 0;
-    }
+    /*CONTACT*/
     .farewell__div{
-        display: grid;
-        color: rgb(0, 0, 0);
+        margin-bottom: 2rem;
     }
-    
-    .farewell__form{
-        color: beige;        
-        background-color: rgb(84, 69, 50);
-        border-radius: 5px;    
-        box-shadow: 5px 5px 1px burlywood;
-    }
-
-
     /*TERMINA CONTACT*/
     /*FOOTER*/
     .foot{
@@ -433,13 +452,16 @@
         background-color: beige;
     }
 
+    /*HOME*/
     .grid{
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        height: 140vh;
     }
     
     .navBar{
+        font-size: 1.2rem;
         padding-top: 2%;
         justify-content: center;
         flex-direction: column;
@@ -455,44 +477,103 @@
         margin-top: 1rem;
     }
 
-    .grid-galery{
-        margin-top: 5%;
-        margin-bottom: 5%;
-        /* display: flex
-        flex-direction: column; */
+    .hero{
+        justify-content: center;
+        font-size: 2.5rem;
     }
 
-    .grid-galery__container{
-       /*  display: flex;
-        flex-direction: column;
-        place-items: center; */
+    /*TERMINA HOME*/
+    /*ARRANCA PROJECTS*/
+    .grid-galery{
         display: grid;
-        grid-gap: 1rem;
-        grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
-        grid-template-columns: 1fr,1fr;
-        font-size: 1.2rem;
+        background-color: beige;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 1rem;
+    }
+    
+    .grid-galery__container{
+        display: flex;
+        flex-direction: column;
+        background-color: beige;
+        place-items: center;
+    }
+    
+    .grid-galery__cards{
+        padding: 0.5rem;
+        text-align: center;
+        width: 50%;
     }
 
     #img1,#img2,#img3,#img4{
         width: 60%;
     }
 
-    .farewell{
-        background-color: beige;
-        display: flex;
+    /*TERMINA PROJECTS*/
+    /*ARRANCA ABOUT*/
+
+    .foo{
+        display: grid;
+        place-items: center;
     }
-    
-    .farewell__div{
+    .foo__container{
+        /* background-color: brown; */
+        width: 90vw;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: rgb(0, 0, 0);
+        padding: 1rem;
+        place-items: center;
     }
 
+    .foo__container__img{
+        padding-bottom: 1rem;
+        height: 30rem;
+        width: 50%;
+    }
+
+    .foo__container-curriculum{
+        display: grid;
+        place-items: center;
+    }
+
+    .foo__container__img-curriculum{
+        width: 80%;
+        padding-bottom: 2rem;
+    }
+
+    /*TERMINA ABOUT*/
+    /*ARRANCA CONTACT*/
+
+    .farewell__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15rem 30rem;
+        grid-template-areas: 
+            "farewell__div"
+            "farewell__form"        
+        ;
+    }
+    .farewell__div{
+        grid-area: farewell__div;
+        display: grid;
+        color: rgb(0, 0, 0);
+    }
+    
+    .farewell__form{
+        grid-area: farewell__form;
+        display: grid;
+        color: beige;        
+        background-color: rgb(84, 69, 50);
+        border-radius: 5px;    
+        box-shadow: 5px 5px 1px burlywood;
+    }
+
+
+    /*TERMINA CONTACT*/
+    /*FOOTER*/
     .foot{
         display: flex;
-        height: 4.5%;
+        height: 5%;
         justify-content: space-around;
         align-items: center;
         background-color: burlywood;
